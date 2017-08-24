@@ -1,4 +1,12 @@
-# Ethereum HTTP inside Blockchain
+<p align="center">
+    <h1>HTTP inside Ethereum Blockchain</h1><br>
+  <a href="https://github.com/hunterlong/ether-http">Website</a> |
+  <a href="https://etherscan.io/address/0xD0387B1F266da78d604446AF5744BeC4D0996987">Mainnet</a> |
+  <a href="#implementing-inside-contracts">Implement</a> |
+  <br>
+  HTTPcontract(<b>0xD0387B1F266da78d604446AF5744BeC4D0996987</b>)
+  <br><br>
+</p>
 
 Quickly recieve HTTP responses from outside the Ethereum blockchain and get a callback to your contract to do more functionality. 
 
@@ -76,6 +84,7 @@ contract RemoteContract {
 
 ## Future Plans
 - Callback with responses stored in mapping contract
+- Implement unique ID's for transactions
 - Customtizable gas limit and gas prices for callback()
 - Encrypted URL, data, and response data variable (JSON)
 - Commenting code and functions
