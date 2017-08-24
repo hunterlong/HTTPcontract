@@ -18,6 +18,9 @@ contract RemoteContract {
     
     string private url;
     
+    function changeUrl(string _url) {
+        url = _url;
+    }
     
     function RemoteContract() {
         http = HTTPcontract(0xD0387B1F266da78d604446AF5744BeC4D0996987);
@@ -25,16 +28,21 @@ contract RemoteContract {
         url = "https://www.random.org/integers/?num=1&min=1&max=100&col=1&base=10&format=plain&rnd=new";
     }
     
-    function SendIt() external {
+    function doHTTP() payable external {
+        uint cost = http.getCallbackCost();
+        require(msg.value >= cost);
         url = "https://www.random.org/integers/?num=1&min=1&max=100&col=1&base=10&format=plain&rnd=new";
-        
-        http.requestCallback(url, "POST", "", "all", this);
-        
+        validSender = http.getResponder();
+        http.requestCallback.value(cost).gas(80000)(url, "POST", "", "all", this);
     }
     
     function callback(string response) external {
         require(msg.sender == validSender);
         NewResponse(response);
+    }
+    
+    function kill() {
+        suicide(msg.sender);
     }
     
     
