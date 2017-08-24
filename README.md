@@ -11,8 +11,8 @@
 Quickly recieve HTTP responses from outside the Ethereum blockchain and get a callback to your contract to do more functionality. 
 
 ## Pricing
-- Request with NO callback to contract: 0.10 USD (in ETH)
-- Request with callback: 0.50 USD (in ETH)
+- Request with NO callback to contract: 0.10 USD (in ETH) `getCallbackCost()`
+- Request with callback: 0.50 USD (in ETH) `getCost()`
 
 ## HTTPcontract Contract API
 Include this contract into your contract. You can use any of these functions.
