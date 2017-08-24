@@ -1,5 +1,5 @@
 <p align="center">
-    <h1>HTTP inside Ethereum Blockchain</h1><br>
+    <b>HTTP inside Ethereum Blockchain</b><br>
   <a href="https://github.com/hunterlong/ether-http">Website</a> |
   <a href="https://etherscan.io/address/0xD0387B1F266da78d604446AF5744BeC4D0996987">Mainnet</a> |
   <a href="#implementing-inside-contracts">Implement</a> |
