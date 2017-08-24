@@ -2,11 +2,12 @@
 
 Quickly recieve HTTP responses from outside the Ethereum blockchain and get a callback to your contract to do more functionality. 
 
-### Pricing
+## Pricing
 - Request with NO callback to contract: 0.10 USD (in ETH)
 - Request with callback: 0.50 USD (in ETH)
 
-### HTTPcontract Contract API
+## HTTPcontract Contract API
+Include this contract into your contract. You can use any of these functions.
 ```
 contract HTTPcontract {
     function getCallbackCost() constant returns (uint);
@@ -19,7 +20,8 @@ contract HTTPcontract {
 ```
 
 
-### HTTP POST/GET Callback Request
+## HTTP POST/GET Callback Request
+Below is a full example of how to use HTTPcontract with callbacks back to your contract. When you receive the `callback()` it should verify that the sender is the HTTPcontract verified address by using `http.getResponder();`
 ```
 pragma solidity ^0.4.15;
 
