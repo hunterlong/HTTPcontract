@@ -73,3 +73,10 @@ contract RemoteContract {
 }
 
 ```
+
+## Future Plans
+- Callback with responses stored in mapping contract
+- Customtizable gas limit and gas prices for callback()
+- Encrypted URL, data, and response data variable (JSON)
+- Commenting code and functions
+- Clean for production release
