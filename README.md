@@ -1,5 +1,6 @@
 <p align="center">
     <b>HTTP contract for the Ethereum Blockchain</b><br>
+    <b>THIS IS TOO BETA - CONTRACT WILL CHANGE SOON</b><br>
   <a href="https://github.com/hunterlong/ether-http">Website</a> |
   <a href="https://etherscan.io/address/0xD0387B1F266da78d604446AF5744BeC4D0996987">Mainnet</a> |
   <a href="#http-postget-callback-request">Example</a> |
