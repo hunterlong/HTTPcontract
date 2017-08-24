@@ -14,18 +14,19 @@ contract RemoteContract {
     
     HTTPcontract public http;
     address private validSender;
-    event NewResponse(string response);
-    
     string private url;
     
-    function changeUrl(string _url) {
-        url = _url;
-    }
-    
+    event NewResponse(string response);
+        
     function RemoteContract() {
         http = HTTPcontract(0xD0387B1F266da78d604446AF5744BeC4D0996987);
         validSender = http.getResponder();
         url = "https://www.random.org/integers/?num=1&min=1&max=100&col=1&base=10&format=plain&rnd=new";
+    }
+    
+        
+    function changeUrl(string _url) {
+        url = _url;
     }
     
     function doHTTP() payable external {
