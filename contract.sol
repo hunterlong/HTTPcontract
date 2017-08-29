@@ -28,6 +28,14 @@ pragma solidity ^0.4.16;
 ///
 /// Callback to contract (msg.sender)
 /// Callback Response: "1ee615d87a9e555655b245f6d39bebc2"
+///
+/// Callback Function to include in your contract
+/*
+  function callback(uint id, string response) {
+    require(msg.sender==http.getResponder());
+    // your functionality inside of here!
+  }
+*/
 
 
 contract HTTP {
