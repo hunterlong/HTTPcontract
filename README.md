@@ -28,6 +28,14 @@ contract HTTPcontract {
 }
 ```
 
+## Callback function in your contract
+Include this contract into your contract. You can use any of these functions.
+```
+function callback(uint id, string response) {
+    require(msg.sender==http.getResponder());
+    // your functionality inside of here!
+}
+```
 
 ## HTTP POST/GET Callback Request
 Below is a full example of how to use HTTPcontract with callbacks back to your contract. When you receive the `callback()` it should verify that the sender is the HTTPcontract verified address by using `http.getResponder();`
